@@ -1,4 +1,4 @@
-import { Scissors } from "lucide-react";
+import { Scissors, LogIn } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const Header = () => (
@@ -13,11 +13,17 @@ export const Header = () => (
         <a href="#oferta" className="hover:text-gold transition-smooth">Oferta</a>
         <a href="#rezerwacja" className="hover:text-gold transition-smooth">Rezerwacja</a>
         <a href="#kontakt" className="hover:text-gold transition-smooth">Kontakt</a>
-        <Link to="/admin" className="text-muted-foreground hover:text-gold transition-smooth text-xs">
+      </nav>
+      <div className="flex items-center gap-3">
+        <a href="#rezerwacja" className="md:hidden text-gold text-sm uppercase tracking-wider">Rezerwuj</a>
+        <Link
+          to="/login"
+          className="inline-flex items-center gap-2 border border-gold/40 text-gold hover:bg-gold hover:text-background transition-smooth px-3 py-1.5 text-xs uppercase tracking-wider rounded-sm"
+        >
+          <LogIn className="w-3.5 h-3.5" />
           Panel
         </Link>
-      </nav>
-      <a href="#rezerwacja" className="md:hidden text-gold text-sm uppercase tracking-wider">Rezerwuj</a>
+      </div>
     </div>
   </header>
 );
